@@ -34,6 +34,7 @@ import orjson
 
 from app.platform.errors import UpstreamError
 from app.platform.logging.logger import logger
+from app.platform.config.snapshot import get_config
 
 
 # ---------------------------------------------------------------------------
@@ -47,7 +48,6 @@ CONSOLE_MODELS: dict[str, str] = {
     "grok-4.3-low":                         "grok-4.3",
     "grok-4.3-medium":                      "grok-4.3",
     "grok-4.3-high":                        "grok-4.3",
-    "grok-4.5-console":                     "grok-4.5",
     "grok-4.20-0309-reasoning-console":     "grok-4.20-0309-reasoning",
     "grok-4.20-0309-console":               "grok-4.20-0309",
     "grok-4.20-0309-non-reasoning-console": "grok-4.20-0309-non-reasoning",
@@ -89,7 +89,6 @@ _MODELS_WITH_SEARCH_TOOLS: frozenset[str] = frozenset({
     "grok-4.20-0309-reasoning",
     "grok-4.20-0309-non-reasoning",
     "grok-4.3",
-    "grok-4.5",
     "grok-build-0.1",
 })
 
